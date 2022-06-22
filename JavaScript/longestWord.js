@@ -17,9 +17,11 @@ function LongestWord(sen) {
 }
 
 // solution by escapiststupor found on coderbyte :
-// // returns an array of strings with removed punctuation
 
 // function LongestWord(sen) {
+
+// // returns an array of strings with removed punctuation
+
 //   const arr = sen.match(/[a-z]+/gi);
 
 // // sorts by length:
