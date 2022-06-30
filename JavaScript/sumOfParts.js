@@ -1,9 +1,22 @@
+/*Instructions: 
+input : ls = [0, 1, 3, 6, 10]
+
+Its following parts:
+
+ls = [0, 1, 3, 6, 10]
+ls = [1, 3, 6, 10]
+ls = [3, 6, 10]
+ls = [6, 10]
+ls = [10]
+ls = []
+The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0] */
+
 function partsSums(ls) {
   if (ls.length === 0) {
     return [0];
   }
 
-  let sums = [0];
+  let sums = [];
 
   let initialSum = 0;
   for (let i = 0; i < ls.length; i++) {
@@ -16,20 +29,8 @@ function partsSums(ls) {
     sums.push(initialSum);
     ls.shift();
   }
-  return sums.sort((a, b) => b - a);
-
-  // function arraySum(arr) {
-  //   if (arr.length > 0) {
-  //     let sum = sums[sums.length - 1] - arr[0];
-  //     sums.push(sum);
-  //     arr.shift();
-  //     return arraySum(arr);
-  //   } else {
-  //     sums.push(0);
-  //     return sums;
-  //   }
-  // }
-  // return arraySum(ls);
+  sums.push(0);
+  return sums;
 }
 
 console.log(partsSums([0, 1, 3, 6, 10])); // [20, 20, 19, 16, 10, 0]
