@@ -24,10 +24,12 @@ function partsSums(ls) {
   }
   sums.push(initialSum);
 
+  let counter = 0;
+
   for (let i = ls.length - 1; i > 0; i--) {
-    initialSum -= ls[0];
+    initialSum -= ls[counter];
     sums.push(initialSum);
-    ls.shift();
+    counter++;
   }
   sums.push(0);
   return sums;
