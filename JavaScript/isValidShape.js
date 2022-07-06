@@ -1,8 +1,6 @@
 function isValidShape(sideLengths, numOfSides) {
   const max = Math.max(...sideLengths);
-  const sum =
-    sideLengths.reduce((prev, current) => prev + current) -
-    Math.max(...sideLenghts);
+  const sum = sideLengths.reduce((prev, current) => prev + current) - max;
 
   return max >= sum || sideLengths.length !== numOfSides ? false : true;
 }
